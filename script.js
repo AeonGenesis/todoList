@@ -1,7 +1,7 @@
 const button = document.getElementById("enter");
 const input = document.getElementById("userinput");
 const ul = document.querySelector("ul");
-const li = document.querySelector("li");
+const li = document.querySelectorAll("li");
 
 function inputLength() {
 	return input.value.length;
@@ -39,4 +39,7 @@ button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
 
-li.addEventListener("click", strikeThrough);
+// li.addEventListener("click", strikeThrough);
+for (var i = 0; i<li.length; i++) {
+	li.addEventListener("click", strikeThrough);
+}
